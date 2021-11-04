@@ -1,0 +1,36 @@
+<header>
+    <nav class="uk-navbar-container navbar" uk-navbar>
+        <div class="uk-navbar-left uk-visible@s">
+            <ul class="uk-navbar-nav nav-links">
+                <li class="uk-active"><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'dashboard' %}">Minhas notas</a></li>
+
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+        >
+        <div class="uk-navbar-center">
+            <a class="uk-navbar-item uk-logo logo" href="#">Nied Notas</a>
+        </div>
+
+        {% if user.is_authenticated %}
+
+        <div class="uk-navbar-right uk-visible@s">
+            <a class="uk-button uk-button-default login-link" href="{% url 'logout' %}">Logout</a>
+        </div>
+        <div class="uk-navbar-right uk-hidden@s">
+            <a class="uk-button uk-button-default login-link-responsive" href="{% url 'logout' %}">Logout</a>
+        </div>
+
+        {% else %}
+        <div class="uk-navbar-right uk-visible@s">
+            <a class="uk-button uk-button-default" href="{% url 'cadastro' %}">Cadastrar</a>
+            <a class="uk-button uk-button-default login-link" href="{% url 'login' %}">Login</a>
+        </div>
+        <div class="uk-navbar-right uk-hidden@s">
+            <a class="uk-button uk-button-default login-link-responsive" href="{% url 'login' %}">Login</a>
+        </div>
+        {% endif %}
+
+    </nav>
+</header>

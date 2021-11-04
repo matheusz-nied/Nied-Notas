@@ -1,0 +1,226 @@
+
+
+body {
+    background-color: rgb(252, 252, 252);
+}
+/* Header */
+
+.navbar {
+    height:80px;
+}
+
+.logo {
+    font-size: 2.2rem;
+}
+.login-link {
+    margin-right: 1.3rem;
+    margin-left: 3.3rem;
+}
+
+.login-link-responsive {
+    font-size:0.7rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+margin-bottom: 1rem;
+margin-right: 0.6rem;
+}
+
+/* Login e Cadastro */
+
+.container-login {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-buttons-create-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main */
+
+.input-search {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+@media screen and (max-width: 916px) {
+    .input-search {
+        justify-content: center;
+        padding-right: 0;
+
+    }
+}
+main {
+    min-height: 82vh;
+
+}
+.container-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;    
+    padding-bottom: 2rem;   
+}
+
+@media screen and (max-width: 1540px) {
+    .container-cards {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+@media screen and (max-width: 1140px) {
+    .container-cards {
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width: 916px) {
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.container-float-button{
+    position: fixed;
+    right:1rem;
+    bottom:2rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+
+}
+.float-button {
+    background-color: rgb(253, 1, 1);
+
+    color: black;
+    position: absolute;
+    width: 5.25rem;
+    height: 5.25rem;
+    border-radius: 3rem;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+.float-button:hover {
+    width: 5.75rem;
+    height: 5.75rem; 
+}
+.container-buttons-create-nota {
+display: flex;
+justify-content: space-between;
+}
+
+@media screen and (max-width: 916px) {
+    .float-button {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+    .float-button:hover {
+        width: 4rem;
+        height: 4rem; 
+    }
+}
+
+.add-nota {
+    font-weight: 700;
+}
+/* Nota */
+
+.casca-card {
+    height: 20rem;
+    width: 20rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    margin-top: 2rem;
+    overflow:hidden;
+    }
+
+.casca-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.nota {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.header-nota {
+    font-size:1.325rem;
+    padding-top:0.6rem;
+height: 3rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.content-nota {
+    padding-top: 0.675rem;
+    height: 100%;
+    overflow:hidden;
+}
+.text-content-nota {
+    margin-left: 1rem;
+    margin-right: 1rem;
+text-align: center; 
+}
+
+.divider {
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.footer-nota {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 0.875rem 0.1rem 0.875rem;
+}
+
+/* Footer */
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:2rem;
+    
+    
+    
+}
+
+.text-footer {
+    font-size: 1.225rem;
+    font-weight:700;
+    color: rgb(0, 0, 0);
+    opacity: 0.7;
+}
+.twitter {
+    color: #1D9BF0;
+}
+.linkedin {
+    color: #0A66C2;
+}
+.instagram {
+    color: #07d000;
+}
+.github {
+    color: black;
+}
