@@ -27,9 +27,9 @@ SECRET_KEY = 'ad5f7feae130a6aaf6c65e39a188041f77c33b556c60b582'
 #SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://nied-notas.herokuapp.com/']
+ALLOWED_HOSTS = ['https://nied-notas.herokuapp.com/', '*']
 
 
 # Application definition

@@ -1,0 +1,14 @@
+.container-about{
+    text-align: center;
+    margin: 3rem;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tittle-about {
+    color: black;
+}
+

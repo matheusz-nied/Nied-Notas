@@ -227,6 +227,17 @@ text-align: center;
 .title-nota-info {
     text-align: center;
 }
+.sem-notas {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.text-sem-notas {
+ text-align: center;
+ text-decoration: dotted;
+}
 
 /* Footer */
 

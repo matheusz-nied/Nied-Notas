@@ -1,0 +1,18 @@
+.container-home{
+    text-align: center;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tittle-home {
+    opacity: 0.86;
+}
+
+.text-home {
+    color: black;
+    font-weight: 700;
+    font-size:1.5rem;
+}

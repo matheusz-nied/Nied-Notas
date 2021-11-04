@@ -15,12 +15,14 @@
         </form>
     </div>
 
-    <div class="container-cards">
 
         {% if notas %}
+        <div class="container-cards">
+
         {% for nota in notas %}
         <!-- Nota -->
         <a href="#i{{ nota.id }}" style="text-decoration:none" uk-toggle>
+            
             <div class="uk-card uk-card-default uk-height-1-1 casca-card">
                 <div class="nota">
                     <div class="header-nota">
@@ -42,65 +44,73 @@
 
             </div>
             <!-- This is the modal View Nota -->
-            <div id="i{{ nota.id }}" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body">
-                    <h2 class="uk-modal-title title-nota-info"> {{nota.nome_nota}}</h2>
-                    <hr class="uk-divider-icon divider">
-                    <p>{{nota.content}}</p>
-                    <p class="uk-text-right">
-                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                        <button class="uk-button uk-button-secondary" uk-toggle="target: #e{{ nota.id }}">Edit</button>
-                        <!-- Modal Edit Nota -->
-                    <div id="e{{ nota.id }}" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <form action="{% url 'edit_nota' %}" method="POST">
-                                {% csrf_token %}
+            
+            
+        </a>
+        <div id="i{{ nota.id }}" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title title-nota-info"> {{nota.nome_nota}}</h2>
+                <hr class="uk-divider-icon divider">
+                
+                <p>{{nota.content}}</p>
+                
+                <div class="uk-text-right">
+                    
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-secondary" uk-toggle="target: #e{{ nota.id }}">Edit</button>
+                    <!-- Modal Edit Nota -->
+                    
+                    
+                <div id="e{{ nota.id }}" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body">
+                        <form action="{% url 'edit_nota' %}" method="POST">
+                            {% csrf_token %}
 
-                                <fieldset class="uk-fieldset">
+                            <fieldset class="uk-fieldset">
 
-                                    <legend class="uk-legend">Edite sua nota</legend>
-                                    <input style="display: none;" name="nota_id" value="{{ nota.id }}">
+                                <legend class="uk-legend">Edite sua nota</legend>
+                                <input style="display: none;" name="nota_id" value="{{ nota.id }}">
 
-                                    <div class="uk-margin">
-                                        <input class="uk-input" type="text" name="title_nota" placeholder="Tittle" value={{nota.nome_nota}}>
-                                    </div>
-
-                                    <div class="uk-margin">
-                                        <input class="uk-input" type="text" name="category_nota" placeholder="Categoria"  value={{nota.category}}>
-                                    </div>
-
-
-                                    <div class="uk-margin">
-                                        <textarea class="uk-textarea" rows="5" name="content_nota" 
-                                            placeholder="Conteúdo da nota" >{{nota.content}}</textarea>
-                                    </div>
-
-
-                                </fieldset>
-                                <div class="container-buttons-create-nota">
-                                    <button class="uk-button uk-button-default">Cancel</button>
-                                    <div>
-                                        <button href="{% url 'delete_nota' nota.id %}" style="text-decoration:none" class="uk-button uk-button-danger">Delete</button>
-                                        <button class="uk-button uk-button-primary">Save</button>
-                                    </div>
-
+                                <div class="uk-margin">
+                                    <input class="uk-input" type="text" name="title_nota" placeholder="Tittle" value={{nota.nome_nota}}>
                                 </div>
 
-                            </form>
-                        </div>
+                                <div class="uk-margin">
+                                    <input class="uk-input" type="text" name="category_nota" placeholder="Categoria"  value={{nota.category}}>
+                                </div>
+
+
+                                <div class="uk-margin">
+                                    <textarea class="uk-textarea" rows="5" name="content_nota" 
+                                        placeholder="Conteúdo da nota" >{{nota.content}}</textarea>
+                                </div>
+
+
+                            </fieldset>
+                            <div class="container-buttons-create-nota">
+                                    <a href="{% url 'delete_nota' nota.id %}" style="text-decoration:none" class="uk-button uk-button-danger">Delete</a>
+                                    <button class="uk-button uk-button-primary">Save</button>
+
+                            </div>
+
+                        </form>
                     </div>
-                    </p>
                 </div>
             </div>
-        </a>
-
+            </div>
+        </div>
         {% endfor %}
+
+    </div>
+
         {% else %}
-        <h3>Notas não encontradas</h3>
+        <div class="sem-notas">
+            <h2 class="text-sem-notas"><i>Notas não encontradas</i></h2>
+
+        </div>
         {% endif %}
 
 
-    </div>
 
 
 
