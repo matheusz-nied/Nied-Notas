@@ -1,5 +1,5 @@
 ## Learn
-Teste
+Testes
 Senha postgres =  1234
 
 -   `'DIRS': [os.path.join(BASE_DIR, 'notas/templates')]` - Especificando onde estão os templates
