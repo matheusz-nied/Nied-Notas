@@ -63,6 +63,9 @@ def logout(request):
 def dashboard(request):
     if request.user.is_authenticated:
         id = request.user.id
+        print("------test------")
+        print(request.user.id)
+        print(id)
         notas = Nota.objects.order_by('-created_at').filter(user=id)
 
         dados = {

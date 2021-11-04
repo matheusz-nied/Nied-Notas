@@ -2,13 +2,8 @@ from django.shortcuts import render,redirect
 from .models import Nota
 
 def home(request):
-
-    notas = Nota.objects.order_by('-created_at').all()
-    dados = {
-        'notas': notas
-    }
     #Precisa enviar o request junto
-    return render(request,'home.html', dados)
+    return render(request,'home.html')
 
 
 def about(request):
@@ -17,10 +12,14 @@ def about(request):
 
 def buscar(request):
     if request.user.is_authenticated:
-        notas = Nota.objects.order_by('-created_at').all()
+        id = request.user.id
+        notas = Nota.objects.order_by('-created_at').filter(user=id)
     
+        print('-----Notas------', notas)
+
         if 'search' in request.GET:
-            nome_a_buscar = request.GET['search']
+            nome_a_buscar = request.GET.get('search')
+            print('----------------',nome_a_buscar)
             if buscar:
                 notas = notas.filter(nome_nota__icontains=nome_a_buscar)
         dados = {
