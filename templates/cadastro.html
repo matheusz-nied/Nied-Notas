@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'partials/navbar.html' %}
+<main>
+    {% include 'partials/_alerts.html' %}
+
+    <form action="{% url 'cadastro' %}" method="POST">
+        {% csrf_token %}
+        <fieldset class="uk-fieldset">
+
+            <div class="container-login">
+
+                <div>
+                    <legend class="uk-legend">Faça seu cadastro</legend>
+
+                </div>
+
+
+                    <input class="uk-input input-cadastro" type="text" name="name" required placeholder="Nome Completo">
+
+                    <input class="uk-input input-cadastro" type="email" name="email" required placeholder="e-mail">
+                    <input class="uk-input input-senha" type="password" name="password" required placeholder="Senha">
+                    <input class="uk-input input-senha" type="password" name="confirmpassword" required placeholder="Confirme sua senha">
+            </div>
+        </fieldset>
+
+        <div class="container-buttons-create-user">
+            <button class="uk-button uk-button-primary button-cadastro">Cadastrar</button>
+
+        </div>
+    </form>
+
+</main>
+
+{% include 'partials/footer.html' %}
+
+{% endblock %}

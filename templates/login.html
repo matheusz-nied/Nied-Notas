@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'partials/navbar.html' %}
+<main>
+
+    {% include 'partials/_alerts.html' %}
+    
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+
+        <div class="container-login">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" name="email" placeholder="e-mail" required type="text">
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                    <input class="uk-input" name="password" placeholder="senha" required type="password">
+                </div>
+
+            </div>
+            <p>Não tem um conta? <a href="{% url 'cadastro' %}">Cadastre-se </a>agora</p>
+
+        </div>
+        <div class="container-buttons-create-user">
+            <button class="uk-button uk-button-primary">Entrar</button>
+
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+
+</main>
+
+{% include 'partials/footer.html' %}
+
+{% endblock %}
