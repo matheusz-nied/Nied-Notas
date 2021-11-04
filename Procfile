@@ -1,1 +1,1 @@
-web: gunicorn nied-notas.wsgi
+web: gunicorn nied_notas.wsgi
