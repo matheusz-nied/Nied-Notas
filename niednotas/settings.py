@@ -92,8 +92,12 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# <<<<<<< HEAD
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+# =======
+
+# >>>>>>> a735d82a20b59ab11c83b730a38aa6e30b33c2b8
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
