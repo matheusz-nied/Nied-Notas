@@ -15,11 +15,8 @@ def buscar(request):
         id = request.user.id
         notas = Nota.objects.order_by('-created_at').filter(user=id)
     
-        print('-----Notas------', notas)
-
         if 'search' in request.GET:
             nome_a_buscar = request.GET.get('search')
-            print('----------------',nome_a_buscar)
             if buscar:
                 notas = notas.filter(nome_nota__icontains=nome_a_buscar)
         dados = {

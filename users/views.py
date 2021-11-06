@@ -63,10 +63,13 @@ def logout(request):
 def dashboard(request):
     if request.user.is_authenticated:
         id = request.user.id
-        print("------test------")
-        print(request.user.id)
-        print(id)
         notas = Nota.objects.order_by('-created_at').filter(user=id)
+
+
+        for nota in notas:
+            nota.created_at = nota.created_at.strftime("%d/%m/%Y")
+
+        print(notas)
 
         dados = {
             'notas': notas
@@ -101,7 +104,7 @@ def delete_nota(request, nota_id):
 
 def edit_nota(request):
     if request.method == 'POST':
-        nota_id = request.POST.get('nota_id') 
+        nota_id = request.POST.get('nota_id')
 
         nota = Nota.objects.get(pk=nota_id)
 
@@ -113,5 +116,3 @@ def edit_nota(request):
         return redirect('dashboard')
     else:
         return redirect('dashboard')
-
-    

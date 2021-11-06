@@ -5,11 +5,21 @@
 {% include 'partials/navbar.html' %}
 
 <main>
-    <div class="container-home">
-        <h1 class="tittle-home"><i>Bem vindo ao Nied Notas</i></h1>
+    
 
-        <h3>Deseja salvar algumas anotações de forma simples e acessar de qualquer lugar?</h3>
-        <p class="text-home">É isso que oferecemos!</p>
+    <div class="container-home">
+        <article class="uk-article">
+
+            <h1 class="uk-article-title"><i>Bem vindo ao Nied Notas</i></h1>
+    
+            <p class="uk-article-meta">Olá <a href="#">{{ user.username }}</a> {{on 12 April 2012. Posted in}} <a
+                    href="#">Blog</a></p>
+    
+            <p class="uk-text-lead">Deseja salvar algumas anotações de forma simples e acessar de qualquer lugar?</p>
+            <p class="uk-text-lead">É isso que oferecemos!</p>
+    
+    
+        </article>
     </div>
 
 </main>
