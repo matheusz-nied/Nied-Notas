@@ -22,11 +22,17 @@ body {
     margin-right: 1.3rem;
     margin-left: 0.5rem;
 }
+@media screen and (max-width: 916px) {
+    .login-link {
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+}
+
 
 .login-link-responsive {
     font-size:0.7rem;
     margin-top: 1rem;
-    margin-left: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
 margin-bottom: 1rem;
