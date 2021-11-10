@@ -137,9 +137,9 @@ main {
 
 }
 .float-button {
-    background-color: #E4E4E4;
+    background-color: #1a1919;
 
-    color: black;
+    color: rgb(255, 255, 255);
     position: absolute;
     width: 5.25rem;
     height: 5.25rem;
