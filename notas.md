@@ -11,3 +11,5 @@ Senha postgres =  1234
 ]` - Configurando local dos arquivos estáticos.
 
 - `$ python3 manage.py collectstatic` - Configurando os arquivos estáticos
+
+- `$ git push heroku HEAD:master` - Fazendo commit para o Heroku.
