@@ -7,6 +7,7 @@ body {
 
 .navbar {
     height:80px;
+    color: red;
 }
 
 .links-nav {
@@ -226,6 +227,10 @@ text-align: center;
 
 .title-nota-info {
     text-align: center;
+}
+
+.content-info-nota {
+    min-height: 15rem;
 }
 .sem-notas {
     margin-top: 3rem;
