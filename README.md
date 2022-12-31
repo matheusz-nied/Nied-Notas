@@ -1,15 +1,14 @@
-## Learn
+# Nied-Notas
 
-Senha postgres =  1234
+Uma aplicação para criações de notas utilizando o framework Django
 
--   `'DIRS': [os.path.join(BASE_DIR, 'notas/templates')]` - Especificando onde estão os templates
+## 🛠️ Construído com
+ - HTML/CSS/JS
+ - Biblioteca UIkit para estilização
+ - Python
+ - Django
+ - SQLite
 
--   `STATIC_ROOT = os.path.join(BASE_DIR, 'static')` - Configurando para usar arquivo estáticos
+## Video do projeto
 
-- `STATICFILES_DIRS = [
-    os.path.join()
-]` - Configurando local dos arquivos estáticos.
-
-- `$ python3 manage.py collectstatic` - Configurando os arquivos estáticos
-
-- `$ git push heroku HEAD:master` - Fazendo commit para o Heroku.
+![Video do Projeto](./videonotas.gif)
