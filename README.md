@@ -1,6 +1,6 @@
 # Nied-Notas
 
-Uma aplicação para criações de notas utilizando o framework Django
+O Nied-Notas é uma aplicação para criação de notas, construída utilizando o framework Django. Desenvolvida com HTML, CSS e JavaScript, faz uso da biblioteca UIkit para estilização. O projeto oferece uma solução simples e eficaz para gerenciar suas notas, aproveitando a poderosa combinação do Django com o SQLite como banco de dados.
 
 ## 🛠️ Construído com
  - HTML/CSS/JS
